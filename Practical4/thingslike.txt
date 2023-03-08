@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+i like 1 very much
+i like 2
+i like 3 
+i like 4
+=======
+ i like 4
+i like 5
+>>>>>>> Alex
+i like 6 
+i like 7 
+i like 8 
+i like 9
+i like 10
+i like 11
+i like 12
+i like 13
+i like 14
+i like 15
