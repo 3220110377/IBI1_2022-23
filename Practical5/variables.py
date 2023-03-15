@@ -11,8 +11,8 @@ else:
  print('d<e') #compare d and e and output the results
 #d<e
 
-X,Y=True, False
-W=X and Y
-Z= X or Y
-print(W,Z)
+X,Y=True, False #Set X,Y as Boolean
+W=X and Y #Set W
+Z= X or Y #Set Z
+print(W,Z) #Output the values of W and Z
 # W is False ,Z is True
