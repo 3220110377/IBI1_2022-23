@@ -1,3 +1,7 @@
+‘‘‘ 
+when the number of rabbits less than 100, double the number of rabbits and add one to the generation
+loop over and over and output the result
+’’’
 g=1 #generation
 n=2 #the number of rabbits or the number of water bottle rabbits need
 while n<100:
