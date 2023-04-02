@@ -154,9 +154,27 @@ print('{:.2%}'.format((np.sum(new_data.loc[:, "new_cases"]))/np.sum(new_data.loc
 8.03%
 """
 # get help from https://blog.csdn.net/u013553529/article/details/78567696#%E8%AF%B4%E6%98%8E
+
+# Boxplot of new cases and new deaths
 plt.boxplot([new_data.loc[:, "new_cases"], new_data.loc[:, "new_deaths"]])
 plt.xticks(ticks=[1, 2], labels=["New Cases", "New Deaths"])
 plt.ylabel("Number of Cases")
 plt.title("New Cases and New Deaths on 31 March 2020")
 plt.show()
+
+# the plot of the world new case
+world_dates = covid_data.loc[covid_data.location == "World", "date"]
+world_new_cases = covid_data.loc[covid_data.location == "World", "new_cases"]
+plt.plot(world_dates, world_new_cases, 'b+')
+plt.show()
+plt.plot(world_dates, world_new_cases, 'r+')
+plt.show()
+plt.plot(world_dates, world_new_cases, 'bo')
+plt.show()
+plt.plot(world_dates, world_new_cases, 'b+')
+plt.xticks(world_dates.iloc[0:len(world_dates):4], rotation=-90)
+plt.show()
+# b means blue, r means red, + means using + to draw, o means using o to draw
+# world_dates.iloc[0:len(world_dates):4] means display dates every fourth to avoid too much overlap
+# rotation=-90 means rotate the date on the X-axis by 90 degrees
 
