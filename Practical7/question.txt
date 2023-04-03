@@ -1,0 +1,13 @@
+Q:How have new cases and total cases developed over time in the UK?
+
+M:
+use
+China_total_cases = covid_data.loc[covid_data.location == "China", "total_cases"]
+China_dates = covid_data.loc[covid_data.location == "China", "date"]
+plt.plot(China_dates, China_total_cases, 'b-')
+plt.xticks(China_dates.iloc[0:len(China_dates):4], rotation=-90)
+to plot
+
+A: According to the figure we can find that from 2019-12-21 to 2020-01-24 the china total cases stays around 0,
+but from 2020-1-24 to 2020-02-25, the china total cases increase to about 80000 quickly,
+however, from 2020-02-25 to 2020-03-28 the china total cases stays around 80000
