@@ -178,3 +178,8 @@ plt.show()
 # world_dates.iloc[0:len(world_dates):4] means display dates every fourth to avoid too much overlap
 # rotation=-90 means rotate the date on the X-axis by 90 degrees
 
+world_new_deaths = covid_data.loc[covid_data.location == "World", "new_deaths"]
+plt.plot(world_dates, world_new_cases, 'b-', world_dates, world_new_deaths, 'r-')
+plt.xticks(world_dates.iloc[0:len(world_dates):4], rotation=-90)
+plt.show()
+# Plot new cases in one colour and new deaths in another colour, - means line
