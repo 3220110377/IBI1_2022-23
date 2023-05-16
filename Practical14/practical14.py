@@ -22,4 +22,4 @@ for term in terms:
         data['definition'].append(defstr_node.firstChild.nodeValue)
         data['childNotes'].append(childNodes)
 df = pd.DataFrame(data)
-df.to_excel("Practical14.xlsx", index=False)
+df.to_excel("autophagosome.xlsx", index=False)
