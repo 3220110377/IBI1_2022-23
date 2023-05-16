@@ -1,6 +1,6 @@
 import blosum as bl
 from itertools import combinations
-matrix = bl.BLOSUM(62)
+matrix = bl.BLOSUM(62)  # Import matrix
 
 
 def seq(name):
@@ -8,13 +8,13 @@ def seq(name):
     f = open(name, 'r')
     for i in f:
         k = i[:-1]
-    return k
+    return k  # Define the function to take out the sequence
 
 
 cat = seq('ACE2_cat.fa')
 human = seq('ACE2_human.fa')
 mouse = seq('ACE2_mouse.fa')
-d = {'cat': cat, 'human': human, 'mouse': mouse}
+d = {'cat': cat, 'human': human, 'mouse': mouse}  # Make a dictionary for easy recall later
 
 
 def test(name1, name2):
@@ -23,7 +23,7 @@ def test(name1, name2):
     for i in range(len(x)):
         val += matrix[x[i]][y[i]]
         if x[i] == y[i]:
-            n += 1
+            n += 1  # Define functions that look up scores in turn and add them up
     print(open('ACE2_%s.fa' % name1, 'r').read() + '\n' + open('ACE2_%s.fa' % name2, 'r').read() + '\n' +
           'Scores =' + str(val) + '\n' + 'Percentage =' + str(n/len(x)))
 
@@ -31,4 +31,7 @@ def test(name1, name2):
 L = ["cat", "human", "mouse"]
 c = combinations(L, 2)
 for a, b in c:
-    test(a, b)
+    test(a, b)  # All cases of ranking combinations
+"""
+Cats and humans were the most similar, followed by rats and humans, and the least similar was cats and rats.
+"""
